@@ -10,4 +10,8 @@ class BookmarksController < ApplicationController
     bookmark.save
     redirect_to '/' #=>一覧ページにリダイレクトする
   end
+
+  def show
+    @bookmark = Bookmark.find(params[:id])
+  end
 end
