@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get 'bookmarks/new', to: 'bookmarks#new'
   
   post 'bookmarks', to: 'bookmarks#create'
+
+  get 'bookmarks/:id', to: 'bookmarks#show'
 end

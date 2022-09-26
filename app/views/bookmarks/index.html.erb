@@ -8,6 +8,8 @@
     <%= book.title %>
     <%= book.author %>
     <%= link_to book.url %>
+    <%= link_to '読む',"/bookmarks/#{book.id}" %>
+    
     
     <br>
 <% end %>
