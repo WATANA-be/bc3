@@ -1,7 +1,10 @@
-<h1>Bookmarks#index</h1>
+<h1>bookwith</h1>
 <p>Find me in app/views/bookmarks/index.html.erb</p>
 <% @bookmarks.each do |book| %>
     <%= book.title %>
     <%= book.author %>
     <%= link_to book.url %>
+    
+    <br>
 <% end %>
+<p><%= link_to '本を作る', '/bookmarks/new' %></p>

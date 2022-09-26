@@ -1,0 +1,9 @@
+<%= form_for @bookmarks , url: {action: :create} do |f| %>
+    <%= f.label :title, 'タイトル' %>
+    <%= f.text_field :title %>
+    <%= f.label :author, '作者' %>
+    <%= f.text_field :title %>
+    <%= f.label :url, 'URL' %>
+    <%= f.text_field :url %>
+    <%= f.submit '登録' %>
+ <% end %>

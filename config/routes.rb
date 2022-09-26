@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root 'bookmarks#index'
+  
+  get 'bookmarks/new', to: 'bookmarks#new'
+  
+  post 'bookmarks', to: 'bookmarks#create'
 end
