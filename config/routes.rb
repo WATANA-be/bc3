@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'bookmarks/:id', to: 'bookmarks#show'
 
-  get 'bookmarks/:id/edit', to: 'bookmarks#edit'
+  get 'bookmarks/:id/show/edit', to: 'bookmarks#edit'
 
-  patch 'bookmarks/:id', to: 'bookmarks#update'
+  patch 'bookmarks/:id/edit', to: 'bookmarks#update'
 end
