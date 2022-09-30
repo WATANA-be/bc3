@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   post 'bookmarks', to: 'bookmarks#create'
 
   get 'bookmarks/:id', to: 'bookmarks#show'
+
+  get 'bookmarks/:id/edit', to: 'bookmarks#edit'
+
+  patch 'bookmarks/:id', to: 'bookmarks#update'
 end

@@ -14,4 +14,18 @@ class BookmarksController < ApplicationController
   def show
     @bookmark = Bookmark.find(params[:id])
   end
+  
+  def edit
+    @bookmark = Bookmark.find(params[:id])
+  end
+
+  def update
+
+    bookmark = Bookmark.find(params[:id])
+    bookmark.update(title: params[:bookmark][:title],
+    url: params[:bookmark][:url])
+    
+    redirect_to '/'
+    
+    end
 end
