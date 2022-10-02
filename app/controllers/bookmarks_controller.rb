@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
     @bookmarks = Bookmark.new
   end
   def create
-    bookmark = Bookmark.new(title: params[:bookmark][:title],author: params[:bookmark][:author], url: params[:bookmark][:url])
+    bookmark = Bookmark.new(title: params[:bookmark][:title],author: params[:bookmark][:author], url: params[:bookmark][:url],phrase: params[:bookmark][:phrase])
     bookmark.save
     redirect_to '/' #=>一覧ページにリダイレクトする
   end
@@ -23,7 +23,7 @@ class BookmarksController < ApplicationController
 
     bookmark = Bookmark.find(params[:id])
     bookmark.update(title: params[:bookmark][:title],
-    url: params[:bookmark][:url])
+    url: params[:bookmark][:url],phrase: params[:bookmark][:phrase])
     
     redirect_to '/'
     
