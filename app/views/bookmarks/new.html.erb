@@ -1,11 +1,16 @@
+<center>
+<p style="text-align:left">
 <%= form_for @bookmarks , url: {action: :create} do |f| %>
+    <br>
     <%= f.label :title, 'タイトル' %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title %><br><br>
     <%= f.label :author, '作者' %>
-    <%= f.text_field :author %>
+    <%= f.text_field :author %><br><br>
     <%= f.label :url, 'Discord URL' %>
-    <%= f.text_field :url %>
+    <%= f.text_field :url %><br><br>
     <%= f.label :phrase, 'フレーズ' %>
-    <%= f.text_field :phrase %>
+    <%= f.text_area :phrase ,size: "200x70" %><br>
     <%= f.submit '登録' %>
  <% end %>
+ </center>
+ </p>
