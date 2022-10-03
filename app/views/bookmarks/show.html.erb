@@ -1,12 +1,21 @@
+<center>
 <p>
 <strong>タイトル:</strong>
-<%= @bookmark.title %>
+<%= @bookmark.title %><br>
+</p>
+<p>
+<strong>作者,共著の場合はチーム:</strong>
+<%= @bookmark.author %><br>
 </p>
 <p>
 <strong>URL:</strong>
-<%= @bookmark.url %>
-
+<%= @bookmark.url %><br>
 </p>
+<strong>本文:</strong>
+<%= @bookmark.phrase %><br>
+</p>
+
 <%= @bookmark.phrase %>
 <%= link_to 'edit', "/bookmarks/#{@bookmark.id}/edit" %>
 <%= link_to 'Back', '/' %>
+</center>

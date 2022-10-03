@@ -1,9 +1,9 @@
 <%= form_for @bookmark , url: {action: :update} do |f| %>
     <%= f.label :title, 'タイトル' %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title %><br>
     <%= f.label :url, 'URL' %>
-    <%= f.text_field :url %>
-    <%= f.label :phrase, 'フレーズ' %>
-    <%= f.text_field :phrase %>
+    <%= f.text_field :url %><br>
+    <%= f.label :phrase, '本文' %><br>
+    <%= f.text_area :phrase ,size: "200x70" %><br>
     <%= f.submit '更新' %>
     <% end %>
