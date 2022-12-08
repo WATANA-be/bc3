@@ -1,17 +1,25 @@
 <h1>bookwith</h1>
 <center>
+<br><br><br>
 <!-- <p>Find me in app/views/bookmarks/index.html.erb</p> -->
 <p>bookwithは本を共同制作できるプラットフォームを提供します<br>
-作品ごとに読み手が交流できる場所で新しい価値を目指します</p>
+作品ごとに読み手が交流できる場所で新しい価値を目指します</p><br><br><br>
+作品一覧<br><br>
+<hr>
 <% @bookmarks.each do |book| %>
     
-    <%= book.title %>
-    <%= book.author %>
-    <%= link_to book.url %>
-    <%= link_to '読む',"/bookmarks/#{book.id}" %>
+    タイトル: <%= book.title %><br>
+    著者: <%= book.author %><br>
+    discord: <%= link_to book.url %><br><br>
+    <%= link_to '読む',"/bookmarks/#{book.id}",class:'makebook' %><br><br>
+    <hr>
     
     
     <br>
 <% end %>
-<p><%= link_to '本を作る', '/bookmarks/new' %></p>
+
 </center>
+<right style="text-align: right">
+<p><%= link_to '本を作る', '/bookmarks/new' ,class:'makebook'%></p>
+</right>
+
